@@ -24,7 +24,7 @@ const Article = mongoose.model("Article", articleSchema);
 
 
 app.get("/", (req, res) => {
-    res.send("<div> <h1>REST ARTICLE API</h1> <a href=\"#\">GitHub Repo</a> </div>")
+    res.sendFile(__dirname + '/index.html')
 })
 
 
@@ -125,4 +125,4 @@ const PORT = process.env.PORT || '5000';
 
 app.listen(PORT, function () {
     console.log(`Listening to port: ${PORT}`);
-})
+});
