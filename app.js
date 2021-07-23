@@ -25,7 +25,7 @@ const articleSchema = {
 const Article = mongoose.model("Article", articleSchema);
 
 
-app.get("/", (req, res) => {
+app.get("https://articles-rest-api.herokuapp.com", (req, res) => {
     res.send("<div> <h3>REST API ON ARTICLE</h3> <br/> <a href=\"#\">GitHub Repo</a> </div>");
 })
 
