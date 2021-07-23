@@ -121,7 +121,8 @@ app.route("/articles/:articleName")
     });
 
 
+const PORT = process.env.PORT || '5000';
 
-app.listen("3000", function () {
-    console.log("Listening on port 3000 !");
+app.listen(PORT, function () {
+    console.log(`Listening to port: ${PORT}`);
 })
