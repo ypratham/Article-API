@@ -4,8 +4,6 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.set('view engine', "ejs");
-
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -25,8 +23,8 @@ const articleSchema = {
 const Article = mongoose.model("Article", articleSchema);
 
 
-app.get("https://articles-rest-api.herokuapp.com", (req, res) => {
-    res.send("<div> <h3>REST API ON ARTICLE</h3> <br/> <a href=\"#\">GitHub Repo</a> </div>");
+app.get("/", (req, res) => {
+    res.send("<div> <h1>REST ARTICLE API</h1> <a href=\"#\">GitHub Repo</a> </div>")
 })
 
 
